@@ -1,146 +1,246 @@
 :root {
-	--grey: rgb(90, 90, 90);
-	/* Columbia Blues: https://visualidentity.columbia.edu/content/colors-1 */
-	--blue1: rgb(2,33,105);
-	--blue2: rgb(0,51,160);
-	--blue3: rgb(0,114,206);
-	--blue4: rgb(108,172,228);
-	--pink1: #F9564F;
- }
+    --bg: #f7f9fc;
+    --surface: #ffffff;
+    --ink: #182033;
+    --muted: #5f6b7a;
+    --soft: #e3e8ef;
+    --accent: #0f5ea8;
+    --accent-strong: #b83245;
+    --shadow: 0 18px 45px rgba(24, 32, 51, 0.07);
+}
 
-html, p{
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
     margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 300;
-    letter-spacing: 0.5px;
-    color: var(--grey);
-}
-p{
-    margin: 0.2em;
-}
-
-ol, ul {
-    list-style: none;
-}
-
-ul {
-    list-style-position: inside;
-    list-style-type: none;
+    background:
+        linear-gradient(180deg, rgba(15, 94, 168, 0.08), rgba(15, 94, 168, 0) 270px),
+        var(--bg);
+    color: var(--ink);
+    font-family: "Source Sans 3", "Source Sans Pro", Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.65;
+    letter-spacing: 0;
 }
 
 a {
+    color: var(--accent);
     text-decoration: none;
-    color:  var(--pink1);
+    text-underline-offset: 4px;
 }
 
-i {
-    font-style: italic;
-}
-
-h1 {
-    font-weight: 500;
-    color: var(--blue1);
-}
-
-b {
-    font-weight: 500;
+a:hover,
+a:focus-visible {
+    color: var(--accent-strong);
+    text-decoration: underline;
 }
 
 strong {
-    color: #fdc450;
     font-weight: 700;
 }
 
-/**************************************************/
-
-#header {
-    height: 2em;
-    line-height: 2em;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #ddd;
-    position: fixed;
-    top: 0;
-    left: 50% - 500px;
-    z-index: 9999;
-    width: 1000px;
-    background-color: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(8px);
+.page-shell {
+    width: min(940px, calc(100% - 40px));
+    margin: 0 auto;
+    padding: 46px 0 84px;
 }
 
-#header a {
+.profile {
+    padding: 28px 0 42px;
+    border-bottom: 1px solid var(--soft);
+}
+
+.profile h1 {
+    margin: 0;
+    color: var(--ink);
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 1.08;
+}
+
+.profile-email {
+    margin: 12px 0 0;
+    color: var(--muted);
+    font-size: 18px;
+}
+
+.profile-summary {
+    max-width: 720px;
+    margin: 24px 0 0;
+    color: var(--ink);
+    font-size: 21px;
+    line-height: 1.6;
+}
+
+.profile-summary strong {
+    color: var(--accent);
+}
+
+.profile-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.profile-links a,
+.paper-links a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 34px;
+    padding: 4px 13px;
+    border: 1px solid var(--soft);
+    border-radius: 6px;
+    background: var(--surface);
+    color: var(--accent);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1;
+    box-shadow: 0 5px 18px rgba(24, 32, 51, 0.04);
+}
+
+.profile-links a:hover,
+.profile-links a:focus-visible,
+.paper-links a:hover,
+.paper-links a:focus-visible {
+    border-color: rgba(184, 50, 69, 0.3);
+    color: var(--accent-strong);
     text-decoration: none;
-    color: var(--grey);
-    transition: color 0.3s ease;
 }
 
-#header a:hover {
-    color: var(--pink1);
+.section {
+    padding: 38px 0;
+    border-bottom: 1px solid var(--soft);
 }
 
-/**************************************************/
-
-#profile {
-    padding: 90px 30px 10px 30px;
-    border-bottom: 1px solid #ddd;
+.section:last-child {
+    border-bottom: 0;
 }
 
-#profile-pic {
-    float: left;
-    margin-right: 40px;
-    text-align: center;
-}
-
-#profile img {
-    width: 400px;
+.section-heading {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
     margin-bottom: 18px;
 }
 
-#profile-name {
-    font-size: 3em;
-    line-height: 1em;
-    font-weight: 400;
-    margin-bottom: 10px;
-    color: var(--blue1);
-    text-align: center;
+.section-heading h2 {
+    margin: 0;
+    color: var(--ink);
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.2;
 }
 
-
-#profile-email {
-    margin-bottom: 20px;
-    color: var(--blue1);
-    text-align: center;
+.section-heading::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--soft);
 }
 
-#profile p {
-    margin-bottom: 20px;
+.paper-list {
+    display: grid;
+    gap: 18px;
 }
 
-
-.divider {
-    width: 100%;
-    border-bottom: 1px solid #ddd;
+.paper {
+    position: relative;
+    padding: 22px 24px 22px 30px;
+    border: 1px solid var(--soft);
+    border-left: 4px solid var(--accent);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.78);
+    box-shadow: var(--shadow);
 }
 
-.research-thumb {
-    width: 20em;
-    height: 20em;
-    float: left;
-    margin-top: 7px;
-    padding-right: 30px;
-    margin-bottom: 20px;
+.paper-title {
+    display: inline;
+    color: var(--ink);
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.32;
 }
 
-.research-thumb img {
-    width: 100%;
+.paper-title:hover,
+.paper-title:focus-visible {
+    color: var(--accent);
 }
 
-.research-proj-title {
-    color: var(--blue1);
-    font-weight: 400;
+.paper-authors,
+.paper-venue,
+.service-line {
+    margin: 8px 0 0;
+    color: var(--muted);
+}
+
+.paper-authors {
+    color: var(--ink);
+}
+
+.paper-authors a {
+    color: var(--ink);
+}
+
+.paper-venue span {
+    color: var(--accent-strong);
+    font-weight: 700;
+}
+
+.paper-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+.service-line strong {
+    color: var(--ink);
+}
+
+@media (max-width: 680px) {
+    body {
+        font-size: 17px;
+    }
+
+    .page-shell {
+        width: min(100% - 28px, 940px);
+        padding: 28px 0 58px;
+    }
+
+    .profile {
+        padding: 28px 0 34px;
+    }
+
+    .profile h1 {
+        font-size: 42px;
+    }
+
+    .profile-summary {
+        font-size: 19px;
+    }
+
+    .paper {
+        padding: 20px 18px 20px 22px;
+    }
+
+    .paper-title {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 430px) {
+    .profile h1 {
+        font-size: 36px;
+    }
+
+    .profile-email {
+        overflow-wrap: anywhere;
+    }
 }
