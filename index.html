@@ -1,101 +1,135 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8" />
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap"
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-    <title>yebo0216best</title>
+    <title>Bo Ye</title>
 </head>
 
 <body>
-    <div style="width:1050px;margin: 0px auto;">
-        <header id="header" width="400px" style="display:flex;justify-content: space-around;">
-            <a href="#profile-intro" style="font-size: 19px;">Home</a>
-            <a href="#updates" style="font-size: 19px;">News</a>
-            <a href="#research" style="font-size: 19px;">Research</a>
-            <!-- <a href="#projects">Projects</a> -->
-        </header>
-        <div id="profile">
-            <div id="profile-intro">
-                <div id="profile-name" style="font-size: 30px;">Bo Ye</div>
-                <div id="profile-email" style="font-size: 19px;">yeb@seu.edu.cn | s-yb24@bza.edu.cn</div>
-                <p style="font-size: 19px;">
-                    Hello, I'm a second-year Ph.D. student at SEU and BZA. My recent research focuses on <b>video generation</b>.
-                </p>
-                <div>
-                    <a href="https://github.com/yebo0216best" style="font-size: 19px;">
-                        <b>Github</b>
-                    </a>&nbsp;&nbsp;&bull;&nbsp;&nbsp;
-                    <a href="https://scholar.google.com/citations?user=LCjCYpkAAAAJ&hl=en" style="font-size: 19px;">
-                        <b>Google Scholar</b>
+    <main class="page-shell">
+        <section id="profile-intro" class="profile">
+            <h1>Bo Ye</h1>
+            <p class="profile-email">yeb@seu.edu.cn | s-yb24@bza.edu.cn</p>
+            <p class="profile-summary">
+                Hello, I'm a third-year Ph.D. student at Southeast University and Beijing Zhongguancun Academy. My research focuses on
+                <strong>video generation</strong>.
+            </p>
+            <div class="profile-links" aria-label="Profile links">
+                <a href="https://github.com/yebo0216best">Github</a>
+                <a href="https://scholar.google.com/citations?user=LCjCYpkAAAAJ&hl=en">Google Scholar</a>
+            </div>
+        </section>
+
+        <section class="section" id="research">
+            <div class="section-heading">
+                <h2>Research</h2>
+            </div>
+            <div class="paper-list">
+                <article class="paper">
+                    <a href="https://arxiv.org/pdf/2605.21028" class="paper-title">
+                        DySink: Dynamic Frame Sinks for Autoregressive Long Video Generation
                     </a>
+                    <p class="paper-authors">
+                        <a href="https://yebo0216best.github.io/"><strong>Bo Ye</strong></a>,
+                        Xinyu Cui, Jian Zhao, Tong Wei, Min-Ling Zhang
+                    </p>
+                    <p class="paper-venue">
+                        <span>Preprint</span>.
+                    </p>
+                    <div class="paper-links">
+                        <a href="https://github.com/yebo0216best/DySink">Code</a>
+                        <a href="https://arxiv.org/pdf/2605.21028">Paper</a>
+                    </div>
+                </article>
+
+                <article class="paper">
+                    <a href="https://arxiv.org/pdf/2605.10543" class="paper-title">
+                        TIE: Time Interval Encoding for Video Generation over Events
                     </a>
-                </div>
+                    <p class="paper-authors">
+                        Zhilei Shu, Shangwen Zhu, Zihang Liang, Xiaofan Li, Qianyu Peng, Xinyu Cui, 
+                        <a href="https://yebo0216best.github.io/"><strong>Bo Ye</strong></a>,
+                        Yiming Li, Fan Cheng, Jian Zhao, Yang Cao, Zheng-Jun Zha, Ruili Feng
+                    </p>
+                    <p class="paper-venue">
+                        <span>Preprint</span>.
+                    </p>
+                    <div class="paper-links">
+                        <a>Code</a>
+                        <a href="https://arxiv.org/pdf/2605.10543">Paper</a>
+                    </div>
+                </article>
+
+                <article class="paper">
+                    <a href="https://arxiv.org/pdf/2605.08183" class="paper-title">
+                        Sparsity Hurts: Simple Linear Adapter Can Boost Generalized Category Discovery
+                    </a>
+                    <p class="paper-authors">
+                        <a href="https://yebo0216best.github.io/"><strong>Bo Ye</strong></a>,
+                        Kai Gan, Tong Wei, Min-Ling Zhang
+                    </p>
+                    <p class="paper-venue">
+                        <span>Preprint</span>.
+                    </p>
+                    <div class="paper-links">
+                        <a href="https://github.com/yebo0216best/LAGCD">Code</a>
+                        <a href="https://arxiv.org/pdf/2605.08183">Paper</a>
+                    </div>
+                </article>
+
+                <article class="paper">
+                    <a href="https://openreview.net/pdf?id=97D725GJtQ" class="paper-title">
+                        Semi-Supervised CLIP Adaptation by Enforcing Semantic and Trapezoidal Consistency
+                    </a>
+                    <p class="paper-authors">
+                        Kai Gan,
+                        <a href="https://yebo0216best.github.io/"><strong>Bo Ye</strong></a>,
+                        Min-Ling Zhang, Tong Wei
+                    </p>
+                    <p class="paper-venue">
+                        <span>ICLR 2025</span>.
+                    </p>
+                    <div class="paper-links">
+                        <a href="https://github.com/Gank0078/SemiCLIP">Code</a>
+                        <a href="https://openreview.net/pdf?id=97D725GJtQ">Paper</a>
+                    </div>
+                </article>
+
+                <article class="paper">
+                    <a href="https://arxiv.org/pdf/2309.11930" class="paper-title">
+                        Bridging the Gap: Learning Pace Synchronization for Open-World Semi-Supervised Learning
+                    </a>
+                    <p class="paper-authors">
+                        <a href="https://yebo0216best.github.io/"><strong>Bo Ye</strong></a>,
+                        Kai Gan, Tong Wei, Min-Ling Zhang
+                    </p>
+                    <p class="paper-venue">
+                        <span>IJCAI 2024</span>.
+                    </p>
+                    <div class="paper-links">
+                        <a href="https://github.com/yebo0216best/LPS">Code</a>
+                        <a href="https://arxiv.org/pdf/2309.11930">Paper</a>
+                    </div>
+                </article>
             </div>
-            <div style="clear: both;"></div>
-        </div>
-        <div class="section" id="updates">
-            <h1>News</h1>
-            <ul>
-                <li style="font-size: 19px;"> <b>Aug 2024</b> My Homepage Starts!
-            </ul>
-            <p></p>
-            <div style="clear: both;"></div>
-        </div>
-        <div class="divider"></div>
-        <div style="display:flex;flex-direction: column;" id="research">
-            <h1>Research</h1>
-            <div>
-                <a href="https://yebo0216best.github.io/" style="height: 14em;" class="research-thumb">
-                     <img width="250" src="assets/images/dysink.png" alt="">
-                </a>
-                <a href="https://openreview.net/pdf?id=97D725GJtQ" class="research-proj-title" style="font-size: 22px; display: block; margin: 10px 0;">
-                    DySink: Dynamic Frame Sinks for Autoregressive Long Video Generation
-                </a>
-                <p style="font-size: 18px;">
-                    <a style="color:#000; font-size: 19px;" href="https://yebo0216best.github.io/"><b>Bo Ye</b></a>,
-                    <a style="color:#000; font-size: 19px;">Xinyu Cui</a>,
-                    <a style="color:#000; font-size: 19px;">Jian Zhao</a>,
-                    <a style="color:#000; font-size: 19px;">Tong Wei</a>,
-                    <a style="color:#000; font-size: 19px;">Min-Ling Zhang</a>
-                    <br><em style="font-size: 19px;">arXiv:2605.21028. <strong><i style="color:#1e90ff">Preprint</i></strong>.</em><br>
-                    <a href="https://github.com/yebo0216best/DySink" style="font-size: 18px;"><b>Code</b></a>&nbsp;&nbsp;&bull;&nbsp;&nbsp;
-                    <a href="https://arxiv.org/pdf/2605.21028" style="font-size: 18px;"><b>Paper</b></a>
-                </p>
+        </section>
+
+        <section class="section" id="services">
+            <div class="section-heading">
+                <h2>Service</h2>
             </div>
-            <div>
-                <a href="https://yebo0216best.github.io/" style="height: 14em;" class="research-thumb">
-                    <img width="250" src="assets/images/lps.png" alt="">
-                </a>
-                <a href="https://arxiv.org/pdf/2309.11930" class="research-proj-title" style="font-size: 22px; display: block; margin: 10px 0;">
-                    Bridging the Gap: Learning Pace Synchronization for Open-World Semi-Supervised Learning
-                </a>
-                <p>
-                    <a style="color:#000; font-size: 19px;" href="https://yebo0216best.github.io/"><b>Bo Ye</b></a>,
-                    <a style="color:#000; font-size: 19px;">Kai Gan</a>,
-                    <a style="color:#000; font-size: 19px;">Tong Wei</a>,
-                    <a style="color:#000; font-size: 19px;">Min-Ling Zhang</a>
-                    <br><em style="font-size: 19px;">International Joint Conference on Artificial Intelligence. <strong><i style="color:#1e90ff">IJCAI 2024</i></strong>.</em><br>
-                    <a href="https://github.com/yebo0216best/LPS-main" style="font-size: 18px;"><b>Code</b></a>&nbsp;&nbsp;&bull;&nbsp;&nbsp;
-                    <a href="https://arxiv.org/pdf/2309.11930" style="font-size: 18px;"><b>Paper</b></a>
-                </p>
-            </div>
-            <div style="clear: both;"></div>
-        </div>
-        <div class="section" id="services">
-                <h1>Service</h1>
-                <ul style="font-size: 19px;">
-                    <b>Reviewer:</b> ICLR, NeurIPS, ICML, AAAI, IJCAI, AISTATS.
-                </ul>
-                <p></p>
-                <div style="clear: both;"></div>
-            </div>
-            <div style="clear: both;"></div>
-        </div>
-        
-    </div>
+            <p class="service-line">
+                <strong>Reviewer:</strong> ICLR, NeurIPS, ICML, AAAI, IJCAI, AISTATS.
+            </p>
+        </section>
+    </main>
 </body>
 
 </html>
